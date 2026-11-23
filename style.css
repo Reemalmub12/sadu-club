@@ -4227,10 +4227,15 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
    ========================= */
 
 .sadu-detail-page .profile-name-cell {
-    position: relative;
     padding: 25px;
     text-align: center;
     border: 1px solid #24765b;
+}
+
+/* Keeps the name centered while anchoring Edit Profile
+   to the upper-right edge of the profile card. */
+.sadu-detail-page .profile-heading-content {
+    position: relative;
 }
 
 .sadu-detail-page .profile-name-cell h2 {
@@ -4246,9 +4251,8 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
 
 .sadu-detail-page .profile-name-cell .button {
     position: absolute;
-    right: 20px;
-    top: 0;
-    transform: translateY(-50%);
+    right: -13px;
+    top: -70px;
     margin: 0;
     z-index: 2;
 }
@@ -8530,12 +8534,27 @@ body.light-theme.participation-requests-page
         line-height: 50px;
     }
 
+    /* Course and competition details: show the image under the text, without cutting it */
+    .course-details-page .course-summary {
+        flex-direction: column;
+    }
+
+    .course-details-page .course-media {
+        align-items: stretch;
+    }
+
+    .course-details-page .course-media img {
+        height: auto;
+    }
 }
 
 /* Stop iPhone Safari from turning dates into blue links */
-a[x-apple-data-detectors] {
+a[x-apple-data-detectors],
+a[x-apple-data-detectors] *,
+body.competition-detail-page a[x-apple-data-detectors] {
     color: inherit !important;
     text-decoration: none !important;
+    -webkit-text-fill-color: inherit !important;
 }
 
 /* ---------- PHASE 3 - MOBILE FIXES - END ---------- */
@@ -8622,95 +8641,4 @@ a[x-apple-data-detectors] {
         min-width: 0;
         padding: 10px 4px;
     }
-}
-
-
-/* ============================================================
-   ORGANIZER / INSTRUCTOR PROFILE — MOBILE TYPOGRAPHY FIX
-   Keep desktop styling unchanged; scale profile content on phones.
-   ============================================================ */
-@media (max-width: 700px) {
-    .sadu-detail-page .instructor-page {
-        width: 94%;
-        margin: 22px auto 45px;
-    }
-
-    .sadu-detail-page .instructor-page > h1 {
-        font-size: clamp(27px, 7vw, 36px);
-        line-height: 1.15;
-        overflow-wrap: anywhere;
-    }
-
-    .sadu-detail-page .instructor-wrapper {
-        width: 100%;
-        margin: 22px auto 40px;
-        padding: 4px;
-    }
-
-    .sadu-detail-page .profile-name-cell { padding: 18px 12px; }
-    .sadu-detail-page .profile-name-cell h2 {
-        font-size: clamp(19px, 5vw, 24px);
-        line-height: 1.25;
-    }
-
-    .sadu-detail-page .profile-name-cell .button {
-        position: static;
-        transform: none;
-        display: inline-block;
-        margin: 12px 0 0;
-        padding: 10px 16px;
-        font-size: 16px;
-    }
-
-    .sadu-detail-page .profile-info-cell {
-        padding: 12px 10px;
-        font-size: 16px;
-        line-height: 1.35;
-        overflow-wrap: anywhere;
-    }
-    .sadu-detail-page .profile-info-cell span {
-        display: inline-block;
-        font-size: 21px;
-        margin: 0 0 5px;
-    }
-    .sadu-detail-page .profile-info-cell strong {
-        display: block;
-        font-size: clamp(12px, 3.4vw, 18px);
-        line-height: 1.25;
-        letter-spacing: 0;
-        overflow-wrap: normal;
-    }
-    .sadu-detail-page .profile-info-cell p {
-        font-size: clamp(15px, 4vw, 18px);
-        line-height: 1.35;
-        margin-top: 5px;
-    }
-
-    .sadu-detail-page .profile-section-cell { padding: 18px 14px; }
-    .sadu-detail-page .profile-section-cell h2 {
-        font-size: clamp(22px, 5.5vw, 27px);
-        line-height: 1.2;
-        margin-bottom: 14px;
-    }
-    .sadu-detail-page .profile-section-cell p {
-        font-size: clamp(16px, 4.1vw, 19px);
-        line-height: 1.55;
-        margin: 0 0 14px;
-    }
-    .sadu-detail-page .expertise-list span,
-    .sadu-detail-page .skills-list span {
-        font-size: 15px;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 400px) {
-    .sadu-detail-page .profile-info-cell { padding: 10px 8px; }
-    .sadu-detail-page .profile-info-cell p { font-size: 14px; }
-    .sadu-detail-page .profile-section-cell p { font-size: 15px; }
-}
-
-@media (max-width: 340px) {
-    .sadu-detail-page .profile-info-cell strong { font-size: 11px; }
-    .sadu-detail-page .profile-info-cell p { font-size: 13px; }
 }
