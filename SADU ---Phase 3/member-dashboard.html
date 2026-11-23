@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== PAGE SETTINGS ===== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard | SADU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="member-dashboard-page">
+
+    <!-- ===== HEADER - START ===== -->
+    <header>
+
+        <!-- SADU Logo -->
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html" aria-current="page">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+        </nav>
+
+    </header>
+    <!-- ===== HEADER - END ===== -->
+
+
+    <!-- ===== MAIN CONTENT - START ===== -->
+    <main>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="sadu-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="home.html">Home</a></li>
+                <li aria-current="page">Member Dashboard</li>
+            </ol>
+        </nav>
+
+        <!-- Page Title and Welcome Message -->
+        <h1>Member Dashboard</h1>
+        <p>Welcome back, Najd!</p>
+
+
+        <!-- ===== DASHBOARD ACTIONS - START ===== -->
+        <section class="dashboard-actions" aria-label="Member actions">
+
+            <!-- Request to Join an Offering -->
+            <a class="action-card" href="request-offering.html">
+
+                <span class="icon-circle">
+                    <img src="images/plus-solid-full.svg" alt="">
+                </span>
+
+                <div>
+                    <h3>Request to Join an Offering</h3>
+                    <p>Join upcoming activities and events.</p>
+                </div>
+
+                <span class="card-arrow" aria-hidden="true">→</span>
+
+            </a>
+
+
+            <!-- Evaluate a Completed Offering -->
+            <a class="action-card" href="evaluate-offering.html">
+
+                <span class="icon-circle">
+                    <img src="images/star-solid-full.svg" alt="">
+                </span>
+
+                <div>
+                    <h3>Evaluate a Completed Offering</h3>
+                    <p>Share your experience and rate your past activities.</p>
+                </div>
+
+                <span class="card-arrow" aria-hidden="true">→</span>
+
+            </a>
+
+        </section>
+        <!-- ===== DASHBOARD ACTIONS - END ===== -->
+
+
+        <!-- ===== PARTICIPATION REQUESTS - START ===== -->
+        <section class="participation-section">
+
+            <!-- Section Header -->
+            <div class="participation-header">
+                <h2>Your Participation Requests</h2>
+                <a class="view-all" href="participation-requests.html">
+                    View All →
+                </a>
+            </div>
+
+            <!-- Participation Table -->
+            <table class="participation-table">
+
+                <!-- Table Headings -->
+                <thead>
+                    <tr>
+                        <th scope="col">Offering Title</th>
+                        <th scope="col">Offering Type</th>
+                        <th scope="col">Request Date</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <!-- Table Data -->
+                <tbody>
+
+                    <!-- Request 1 -->
+                    <tr>
+                        <td>Desert Rivals</td>
+                        <td>Competition</td>
+                        <td>10/10/2026</td>
+                        <td>50 SAR</td>
+                        <td>
+                            <span class="status completed">
+                                Completed
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- Request 2 -->
+                    <tr>
+                        <td>Saudi Legends Arena</td>
+                        <td>Competition</td>
+                        <td>12/10/2026</td>
+                        <td>50 SAR</td>
+                        <td>
+                            <span class="status declined">
+                                Declined
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- Request 3 -->
+                    <tr>
+                        <td>Sadu Game Makers</td>
+                        <td>Course</td>
+                        <td>15/10/2026</td>
+                        <td>300 SAR</td>
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+        <!-- ===== PARTICIPATION REQUESTS - END ===== -->
+
+
+        <!-- ===== ACHIEVEMENTS AND BADGES - START ===== -->
+        <section class="achievements-section">
+
+            <!-- Section Title -->
+            <h2>Achievements &amp; Badges</h2>
+
+            <div class="achievements-box">
+
+                <!-- ===== MEMBER LEVEL ===== -->
+                <div class="member-level">
+
+                    <!-- Level Icon -->
+                    <span class="icon-circle">
+                        <img src="images/medal-solid-full.svg" alt="">
+                    </span>
+
+                    <!-- Level Information -->
+                    <div class="level-info">
+
+                        <h3>Level 3 — Heritage Explorer</h3>
+
+                        <p>
+                            Najd is making progress toward Level 4 —
+                            Sadu Champion. 60% completed.
+                        </p>
+
+                        <!-- Progress Bar -->
+                        <div
+                            class="progress-bar"
+                            role="progressbar"
+                            aria-label="Example progress"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="60"
+                        >
+                            <div class="progress-fill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- ===== MEMBER LEVEL - END ===== -->
+
+
+                <!-- ===== BADGES SECTION - START ===== -->
+                <div class="badges-section">
+
+                    <h3>Your Badges</h3>
+
+                    <p>
+                        Badges earned through participation and engagement.
+                    </p>
+
+                    <!-- Badges List -->
+                    <div class="badges-list">
+
+                        <!-- Badge 1: First Steps -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/gamepad-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>First Steps</h4>
+                            <p>Joined the SADU community</p>
+
+                        </div>
+
+
+                        <!-- Badge 2: Course Explorer -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/star-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>Course Explorer</h4>
+                            <p>Explored SADU learning activities</p>
+
+                        </div>
+
+
+                        <!-- Badge 3: First Victory -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/trophy-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>First Victory</h4>
+                            <p>Competition participation</p>
+
+                        </div>
+
+
+                        <!-- Badge 4: Heritage Creator -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/crown-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>Heritage Creator</h4>
+                            <p>Creativity inspired by Saudi heritage</p>
+
+                        </div>
+
+
+                        <!-- Badge 5: Dedicated Player -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/shield-halved-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>Dedicated Player</h4>
+                            <p>Consistent club participation</p>
+
+                        </div>
+
+
+                        <!-- Badge 6: Community Star -->
+                        <div class="badge-item">
+
+                            <span class="icon-circle">
+                                <img src="images/user-group-solid-full.svg" alt="">
+                            </span>
+
+                            <h4>Community Star</h4>
+                            <p>Active community engagement</p>
+
+                        </div>
+
+                    </div>
+                    <!-- Badges List - End -->
+
+                </div>
+                <!-- ===== BADGES SECTION - END ===== -->
+
+            </div>
+
+        </section>
+        <!-- ===== ACHIEVEMENTS AND BADGES - END ===== -->
+
+    </main>
+    <!-- ===== MAIN CONTENT - END ===== -->
+
+
+    <!-- ===== FOOTER - START ===== -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- SADU Logo -->
+            <div class="footer-brand">
+                <img src="images/sadu-logo.png" alt="SADU Logo">
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+    <!-- ===== FOOTER - END ===== -->
+
+
+    <!-- ===== SHARED JAVASCRIPT ===== -->
+    <script src="javaScript.js"></script>
+
+</body>
+</html>

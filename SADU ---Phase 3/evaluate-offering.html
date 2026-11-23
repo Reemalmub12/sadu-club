@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================
+         PAGE SETTINGS
+    ========================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Offering Evaluation | SADU</title>
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="evaluation-page" onload="startPage()">
+
+    <!-- ============================================================
+         HEADER - START
+    ============================================================ -->
+
+    <header>
+
+        <!-- SADU Logo -->
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+
+            <a href="member-dashboard.html" aria-current="page">
+                MEMBER DASHBOARD
+            </a>
+
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+        </nav>
+
+    </header>
+
+    <!-- ============================================================
+         HEADER - END
+    ============================================================ -->
+
+
+    <!-- ============================================================
+         MAIN CONTENT - START
+    ============================================================ -->
+
+    <main>
+
+        <!-- =========================
+             BREADCRUMB NAVIGATION
+        ========================= -->
+
+        <nav class="sadu-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="member-dashboard.html">
+                        Member Dashboard
+                    </a>
+                </li>
+
+                <li aria-current="page">
+                    Evaluate an Offering
+                </li>
+            </ol>
+        </nav>
+
+
+        <!-- ========================================================
+             EVALUATION SECTION - START
+        ======================================================== -->
+
+        <section class="evaluation-section">
+
+            <!-- Page Title -->
+            <h1>Offering Evaluation</h1>
+
+            <p class="evaluation-intro">
+                Share your experience with the world ...
+            </p>
+
+
+            <!-- ====================================================
+                 EVALUATION FORM - START
+            ==================================================== -->
+
+            <form
+                id="evaluation-form"
+                class="evaluation-form"
+                action="#"
+                method="get"
+                novalidate>
+
+
+                <!-- =========================
+                     COMPLETED OFFERING
+                ========================= -->
+
+                <div class="evaluation-field">
+
+                    <span
+                        class="evaluation-field-label"
+                        id="completed-offering-label">
+
+                        Completed Offering
+                        <span class="required-star">*</span>
+                    </span>
+
+                    <!-- Custom Dropdown -->
+                    <details
+                        class="evaluation-custom-select"
+                        id="completed-offering-dropdown">
+
+                        <summary aria-labelledby="completed-offering-label">
+
+                            <span id="completed-offering-display">
+                                Select a completed offering...
+                            </span>
+
+                            <span
+                                class="evaluation-chevron"
+                                aria-hidden="true">
+                            </span>
+
+                        </summary>
+
+                        <!-- Dropdown Options -->
+                        <div
+                            class="evaluation-options"
+                            role="group"
+                            aria-label="Completed offerings">
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="desert-rivals">
+
+                                <span>Desert Rivals</span>
+                            </label>
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="saudi-legends-arena">
+
+                                <span>Saudi Legends Arena</span>
+                            </label>
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="diriyah-duel">
+
+                                <span>Diriyah Duel</span>
+                            </label>
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="najdi-pixel-art">
+
+                                <span>Najdi Pixel Art</span>
+                            </label>
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="sadu-game-makers">
+
+                                <span>Sadu Game Makers</span>
+                            </label>
+
+                            <label class="evaluation-option">
+                                <input
+                                    type="radio"
+                                    name="completed-offering"
+                                    value="from-heritage-to-pixels">
+
+                                <span>From Heritage to Pixels</span>
+                            </label>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+
+                <!-- =========================
+                     RATING
+                ========================= -->
+
+                <fieldset class="rating-fieldset">
+
+                    <legend>
+                        Rating
+                        <span class="required-star">*</span>
+                    </legend>
+
+                    <p class="rating-instruction">
+                        Select a rating (1–5)
+                    </p>
+
+                    <!-- Five-Star Rating -->
+                    <div
+                        class="star-rating"
+                        role="group"
+                        aria-label="Rate the offering from 1 to 5 stars">
+
+                        <input
+                            type="radio"
+                            id="rating-5"
+                            name="rating"
+                            value="5">
+                        <label for="rating-5" title="5 stars">★</label>
+
+                        <input
+                            type="radio"
+                            id="rating-4"
+                            name="rating"
+                            value="4">
+                        <label for="rating-4" title="4 stars">★</label>
+
+                        <input
+                            type="radio"
+                            id="rating-3"
+                            name="rating"
+                            value="3">
+                        <label for="rating-3" title="3 stars">★</label>
+
+                        <input
+                            type="radio"
+                            id="rating-2"
+                            name="rating"
+                            value="2">
+                        <label for="rating-2" title="2 stars">★</label>
+
+                        <input
+                            type="radio"
+                            id="rating-1"
+                            name="rating"
+                            value="1">
+                        <label for="rating-1" title="1 star">★</label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- =========================
+                     FEEDBACK
+                ========================= -->
+
+                <label for="feedback">
+                    Feedback:
+                    <span class="required-star">*</span>
+                </label>
+
+                <textarea
+                    id="feedback"
+                    name="feedback"
+                    placeholder="Write your feedback here ..."
+                    rows="6"
+                    required></textarea>
+
+            </form>
+
+            <!-- ====================================================
+                 EVALUATION FORM - END
+            ==================================================== -->
+
+
+            <!-- =========================
+                 SUBMIT BUTTON
+            ========================= -->
+
+            <div class="evaluation-actions">
+
+                <button
+                    type="button"
+                    id="submit-evaluation"
+                    class="evaluation-submit">
+
+                    Submit Evaluation
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================================
+             EVALUATION SECTION - END
+        ======================================================== -->
+
+    </main>
+
+    <!-- ============================================================
+         MAIN CONTENT - END
+    ============================================================ -->
+
+
+    <!-- ============================================================
+         FOOTER - START
+    ============================================================ -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- SADU Logo -->
+            <div class="footer-brand">
+                <img
+                    src="images/sadu-logo.png"
+                    alt="SADU Logo">
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- ============================================================
+         FOOTER - END
+    ============================================================ -->
+
+
+    <!-- =========================
+         SHARED JAVASCRIPT
+    ========================= -->
+
+    <script src="javaScript.js"></script>
+
+</body>
+</html>

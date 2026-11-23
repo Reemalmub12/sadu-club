@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADU | Manage Activity Leaders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="manage-leaders-page" onload="startPage()">
+
+    <!-- ==========================================
+         SHARED HEADER
+    ========================================== -->
+    <header>
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html" aria-current="page">
+                MANAGER DASHBOARD
+            </a>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         MAIN CONTENT
+    ========================================== -->
+    <main class="manage-leaders-main">
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="sadu-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <a href="manager-dashboard.html">
+                        Manager Dashboard
+                    </a>
+                </li>
+                <li aria-current="page">
+                    Manage Activity Leaders &amp; Instructors
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Page Heading -->
+        <div class="manage-leaders-heading">
+            <h1>Manage Activity Leaders &amp; Instructors</h1>
+            <p>View and manage your team members</p>
+        </div>
+
+        <!-- ==========================================
+             TWO MANAGEMENT SECTIONS
+        ========================================== -->
+        <div class="manage-leaders-sections">
+
+            <!-- Current Leaders and Instructors -->
+            <section class="manage-leaders-card">
+                <h2>Current Leaders and Instructors</h2>
+
+                <form id="delete-leaders-form"
+                      class="sadu-demo-form"
+                      action="#"
+                      method="post"
+                      novalidate>
+
+                    <!-- JavaScript generates the leaders list -->
+                    <div id="leaders-list"></div>
+
+                    <!-- Delete Selected Button -->
+                    <div class="manage-leaders-buttons">
+                        <input type="submit"
+                               class="sadu-submit"
+                               value="Delete Selected">
+                    </div>
+                </form>
+            </section>
+
+            <!-- ==========================================
+                 ADD NEW LEADER OR INSTRUCTOR
+            ========================================== -->
+            <section class="manage-leaders-card">
+                <h2>Add New Leader or Instructor</h2>
+
+                <form id="add-leader-form"
+                      class="sadu-demo-form"
+                      action="#"
+                      method="post"
+                      enctype="multipart/form-data"
+                      novalidate>
+
+                    <!-- Full Name -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-name">Name: *</label>
+                        <input type="text"
+                               id="leader-name"
+                               name="name"
+                               placeholder="Enter full name..."
+                               autocomplete="off"
+                               required>
+                    </div>
+
+                    <!-- Role Dropdown -->
+                    <div class="manage-leaders-field">
+                        <label id="leader-role-label">Role: *</label>
+
+                        <!-- Hidden select stores the chosen role -->
+                        <select id="leader-role" name="role" required hidden>
+                            <option value="">--Select a role--</option>
+                            <option value="Organizer">Organizer</option>
+                            <option value="Instructor">Instructor</option>
+                        </select>
+
+                        <!-- Custom Role Dropdown -->
+                        <div class="leader-custom-dropdown">
+                            <button type="button"
+                                    id="leader-role-button"
+                                    class="leader-picker-button"
+                                    aria-labelledby="leader-role-label leader-role-text"
+                                    aria-expanded="false">
+                                <span id="leader-role-text">
+                                    --Select a role--
+                                </span>
+                                <span class="leader-dropdown-arrow"></span>
+                            </button>
+
+                            <div id="leader-role-options"
+                                 class="leader-dropdown-options"
+                                 hidden>
+                                <button type="button" data-role="Organizer">
+                                    Organizer
+                                </button>
+                                <button type="button" data-role="Instructor">
+                                    Instructor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo Upload -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-photo">Photo: *</label>
+
+                        <div class="sadu-file-picker">
+                            <input type="file"
+                                   id="leader-photo"
+                                   name="photo"
+                                   aria-label="Choose an image file"
+                                   required>
+
+                            <span class="sadu-file-button" aria-hidden="true">
+                                Choose File
+                            </span>
+
+                            <!-- Display the selected filename -->
+                            <span id="leader-selected-file-name"
+                                  class="sadu-file-help"
+                                  aria-live="polite">
+                                PNG, JPG or WEBP
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================
+                         CUSTOM DATE OF BIRTH CALENDAR
+                    ========================================== -->
+                    <div class="manage-leaders-field">
+                        <label id="leader-dob-label">
+                            Date of Birth: *
+                        </label>
+
+                        <div class="leader-date-wrapper">
+
+                            <!-- Hidden date input stores the date -->
+                            <input type="date"
+                                   id="leader-dob"
+                                   name="date-of-birth"
+                                   required
+                                   hidden>
+
+                            <!-- Calendar Trigger -->
+                            <button type="button"
+                                    id="leader-dob-button"
+                                    class="leader-picker-button"
+                                    aria-labelledby="leader-dob-label leader-dob-text"
+                                    aria-expanded="false">
+
+                                <span id="leader-dob-text">
+                                    Select date of birth
+                                </span>
+
+                                <!-- Calendar Icon -->
+                                <svg class="leader-calendar-icon"
+                                     width="20"
+                                     height="20"
+                                     viewBox="0 0 24 24"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     stroke-width="2"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     aria-hidden="true">
+                                    <rect x="3" y="5"
+                                          width="18" height="16" rx="2"/>
+                                    <path d="M16 3v4M8 3v4M3 10h18"/>
+                                </svg>
+                            </button>
+
+                            <!-- Calendar Popup -->
+                            <div id="leader-calendar"
+                                 class="leader-calendar"
+                                 hidden>
+
+                                <!-- Month and Year Navigation -->
+                                <div class="leader-calendar-header">
+
+                                    <button type="button"
+                                            id="leader-prev-month"
+                                            aria-label="Previous month">
+                                        &#10094;
+                                    </button>
+
+                                    <div class="leader-calendar-selects">
+
+                                        <!-- Month Dropdown -->
+                                        <div class="leader-calendar-dropdown">
+                                            <button type="button"
+                                                    id="leader-month-button"
+                                                    class="leader-calendar-select-button"
+                                                    aria-label="Select month"
+                                                    aria-expanded="false">
+                                                <span id="leader-month-text">
+                                                    Month
+                                                </span>
+                                                <span class="leader-dropdown-arrow"></span>
+                                            </button>
+
+                                            <div id="leader-month-options"
+                                                 class="leader-calendar-dropdown-options"
+                                                 hidden></div>
+                                        </div>
+
+                                        <!-- Year Dropdown -->
+                                        <div class="leader-calendar-dropdown">
+                                            <button type="button"
+                                                    id="leader-year-button"
+                                                    class="leader-calendar-select-button"
+                                                    aria-label="Select year"
+                                                    aria-expanded="false">
+                                                <span id="leader-year-text">
+                                                    Year
+                                                </span>
+                                                <span class="leader-dropdown-arrow"></span>
+                                            </button>
+
+                                            <div id="leader-year-options"
+                                                 class="leader-calendar-dropdown-options"
+                                                 hidden></div>
+                                        </div>
+                                    </div>
+
+                                    <button type="button"
+                                            id="leader-next-month"
+                                            aria-label="Next month">
+                                        &#10095;
+                                    </button>
+                                </div>
+
+                                <!-- Weekday Labels -->
+                                <div class="leader-calendar-weekdays">
+                                    <span>Sun</span>
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                </div>
+
+                                <!-- JavaScript generates calendar days -->
+                                <div id="leader-calendar-days"
+                                     class="leader-calendar-days"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-email">Email: *</label>
+                        <input type="email"
+                               id="leader-email"
+                               name="email"
+                               placeholder="Enter email..."
+                               required>
+                    </div>
+
+                    <!-- Area of Expertise -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-expertise">
+                            Area of Expertise: *
+                        </label>
+                        <input type="text"
+                               id="leader-expertise"
+                               name="expertise"
+                               placeholder="Enter area of expertise..."
+                               required>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-skills">Skills: *</label>
+                        <input type="text"
+                               id="leader-skills"
+                               name="skills"
+                               placeholder="Enter skills..."
+                               required>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="manage-leaders-field">
+                        <label for="leader-education">Education: *</label>
+                        <input type="text"
+                               id="leader-education"
+                               name="education"
+                               placeholder="Enter education..."
+                               required>
+                    </div>
+
+                    <!-- Add Button -->
+                    <div class="manage-leaders-buttons">
+                        <input type="submit"
+                               class="sadu-submit"
+                               value="Add">
+                    </div>
+
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- ==========================================
+         SHARED FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-main">
+
+            <!-- Footer Logo -->
+            <div class="footer-brand">
+                <img src="images/sadu-logo.png" alt="SADU Logo">
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+    </footer>
+
+    <!-- Native alerts replace the old notification modal -->
+
+    <!-- Shared JavaScript -->
+    <script src="javaScript.js"></script>
+</body>
+</html>
