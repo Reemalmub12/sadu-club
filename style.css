@@ -4251,8 +4251,8 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
 
 .sadu-detail-page .profile-name-cell .button {
     position: absolute;
-    right: -13px;
-    top: -70px;
+    right: 0;
+    top: -45px;
     margin: 0;
     z-index: 2;
 }
@@ -4405,8 +4405,17 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
         font-size: 22px;
     }
 
+    .sadu-detail-page .profile-name-cell {
+        padding: 30px 12px 22px;
+    }
+
     .sadu-detail-page .profile-name-cell .button {
-        right: 5px;
+        right: 0;
+        top: -42px;
+        padding: 10px 16px;
+        font-size: 16px;
+        line-height: 1.2;
+        white-space: nowrap;
     }
 
     .sadu-detail-page .profile-photo-cell {
@@ -4419,13 +4428,32 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
     }
 
     .sadu-detail-page .profile-info-cell {
-        padding: 12px;
-        overflow-wrap: anywhere;
+        padding: 10px 8px;
+        overflow-wrap: normal;
+        word-break: normal;
+        font-size: 16px;
+        line-height: 1.35;
     }
 
     .sadu-detail-page .profile-info-cell span {
-        font-size: 24px;
-        margin-right: 5px;
+        display: block;
+        font-size: 21px;
+        margin: 0 0 6px;
+    }
+
+    .sadu-detail-page .profile-info-cell strong {
+        display: block;
+        font-size: 15px;
+        line-height: 1.25;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .sadu-detail-page .profile-info-cell p {
+        font-size: 16px;
+        line-height: 1.3;
+        overflow-wrap: normal;
+        word-break: normal;
     }
 
     .sadu-detail-page .profile-section-cell {
