@@ -680,119 +680,6 @@ main > nav.sadu-breadcrumb li[aria-current="page"] {
 }
 
 
-/* ==========================================
-   GLOBAL - INNER PAGES - START
-========================================== */
-
-/* Main content dimensions for inner pages */
-.inner-page main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 30px 5%;
-}
-
-/* Removes extra top margin from page headings */
-.inner-page main h1 {
-    margin-top: 0;
-}
-
-/* Keeps the footer spacing consistent */
-.inner-page .site-footer {
-    display: block;
-    margin-top: 40px;
-}
-
-.inner-page .site-footer .footer-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: start;
-    gap: 35px;
-}
-
-.inner-page .site-footer .footer-contact p {
-    text-align: center;
-    margin: 8px 0;
-}
-
-/* Hides accessible labels visually */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-}
-
-/* GLOBAL - INNER PAGES - END */
-
-
-/* ==========================================
-   GLOBAL - BREADCRUMB - START
-========================================== */
-
-/* Breadcrumb container */
-main > nav.sadu-breadcrumb {
-    display: block;
-    flex: none;
-    width: auto;
-    margin: 0 0 22px;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    text-align: left;
-}
-
-/* Breadcrumb list */
-main > nav.sadu-breadcrumb ol {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-/* Breadcrumb items */
-main > nav.sadu-breadcrumb li {
-    display: inline-flex;
-    align-items: center;
-    color: #F2E5C9;
-}
-
-/* Separator between pages */
-main > nav.sadu-breadcrumb li + li::before {
-    content: ">";
-    display: inline-block;
-    color: #A4B7AB;
-    margin-right: 8px;
-}
-
-/* Breadcrumb links */
-main > nav.sadu-breadcrumb a {
-    color: #F15A24;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: inherit;
-}
-
-/* Link hover and keyboard focus */
-main > nav.sadu-breadcrumb a:hover,
-main > nav.sadu-breadcrumb a:focus-visible {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-/* Current page */
-main > nav.sadu-breadcrumb li[aria-current="page"] {
-    color: #F2E5C9;
-}
-
 /* Keeps breadcrumb positioning within main */
 .inner-page main {
     position: relative;
@@ -2570,21 +2457,6 @@ body.light-theme.offerings-page .offerings-empty {
 .courses-page .course-meta-item:first-child svg path {
     fill: var(--sadu-orange);
     stroke: none;
-}
-
-.courses-page .card-button {
-    display: block;
-    width: 100%;
-    margin-top: auto;
-}
-
-.courses-page .course-full .card-button {
-    color: var(--sadu-cream);
-    background: transparent;
-}
-
-.courses-page .course-full .card-button:hover {
-    background: #104638;
 }
 
 .courses-page .course-card[hidden] {
@@ -4443,32 +4315,18 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
 
     .sadu-detail-page .profile-info-cell strong {
         display: block;
-        font-size: 15px;
+        font-size: clamp(11px, 3.4vw, 15px);
         line-height: 1.25;
         overflow-wrap: normal;
         word-break: normal;
     }
 
+    /* Let long emails wrap inside their cell (after the dot or the @ first) */
     .sadu-detail-page .profile-info-cell p {
-        font-size: 16px;
+        font-size: clamp(12px, 3.6vw, 16px);
         line-height: 1.3;
-        overflow-wrap: normal;
-        word-break: normal;
-    }
-
-    /* Keep long email addresses inside their own table cell on phones. */
-    .sadu-detail-page .email-info-cell div {
-        display: block;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-    }
-
-    .sadu-detail-page .email-info-cell p {
-        max-width: 100%;
         overflow-wrap: anywhere;
-        word-break: break-word;
-        white-space: normal;
+        word-break: normal;
     }
 
     .sadu-detail-page .profile-section-cell {
@@ -8683,155 +8541,5 @@ body.competition-detail-page a[x-apple-data-detectors] {
     .course-details-page .time-box {
         min-width: 0;
         padding: 10px 4px;
-    }
-}
-
-
-/* ============================================================
-   FINAL MOBILE FIXES — ORGANIZER / INSTRUCTOR PROFILE PAGES
-   ============================================================ */
-
-/* Keep the profile pages marked under ABOUT US, including
-   when a mobile browser leaves a previous link in :hover. */
-body.profile-detail-page header nav.navbar a {
-    color: #F2E5C9 !important;
-}
-
-body.profile-detail-page header nav.navbar a[href="about.html"],
-body.profile-detail-page header nav.navbar a[href="about.html"]:hover,
-body.profile-detail-page header nav.navbar a[href="about.html"]:focus {
-    color: #F15A24 !important;
-}
-
-/* Anchor the edit button to the profile card itself.
-   The name remains centered in its own row. */
-body.profile-detail-page .profile-name-cell {
-    position: relative;
-}
-
-body.profile-detail-page .profile-heading-content {
-    position: static;
-}
-
-body.profile-detail-page .profile-name-cell .button {
-    position: absolute;
-    top: -45px;
-    right: 12px;
-    margin: 0;
-    z-index: 3;
-    white-space: nowrap;
-}
-
-/* Prevent oversized page headings and profile text on phones. */
-@media screen and (max-width: 700px) {
-    body.profile-detail-page .instructor-page {
-        width: 94%;
-        margin: 20px auto 40px;
-    }
-
-    body.profile-detail-page .instructor-page > h1 {
-        font-size: clamp(27px, 7vw, 34px);
-        line-height: 1.12;
-        margin: 18px 0 0;
-        overflow-wrap: normal;
-    }
-
-    body.profile-detail-page .sadu-breadcrumb {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    body.profile-detail-page .instructor-wrapper {
-        width: 100%;
-        margin: 22px auto 40px;
-        padding: 8px;
-    }
-
-    body.profile-detail-page .profile-name-cell {
-        padding: 30px 12px 22px;
-    }
-
-    body.profile-detail-page .profile-name-cell h2 {
-        font-size: 22px;
-        line-height: 1.2;
-    }
-
-    body.profile-detail-page .profile-name-cell .button {
-        top: -45px;
-        right: 12px;
-        padding: 10px 16px;
-        font-size: 16px;
-        line-height: 1.2;
-        border-radius: 8px;
-    }
-
-    /* Give the two information columns enough width for labels. */
-    body.profile-detail-page .profile-photo-cell {
-        width: 25%;
-    }
-
-    body.profile-detail-page .profile-info-cell {
-        width: 37.5%;
-        padding: 10px 7px;
-        font-size: 14px;
-        line-height: 1.3;
-    }
-
-    body.profile-detail-page .profile-info-cell strong {
-        display: block;
-        font-size: 12px;
-        line-height: 1.25;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        word-break: normal;
-    }
-
-    body.profile-detail-page .profile-info-cell p {
-        font-size: 14px;
-        line-height: 1.3;
-        overflow-wrap: anywhere;
-        word-break: normal;
-    }
-
-    body.profile-detail-page .profile-info-cell span {
-        font-size: 20px;
-        margin: 0 0 5px;
-    }
-
-    body.profile-detail-page .profile-placeholder {
-        width: min(82px, 85%);
-        height: auto;
-        aspect-ratio: 1 / 1;
-    }
-
-    body.profile-detail-page .profile-section-cell {
-        padding: 16px;
-    }
-
-    body.profile-detail-page .profile-section-cell h2 {
-        font-size: 23px;
-        line-height: 1.2;
-    }
-
-    body.profile-detail-page .profile-section-cell p {
-        font-size: 15px;
-        line-height: 1.55;
-    }
-}
-
-/* Slightly tighter sizing on very narrow phones. */
-@media screen and (max-width: 380px) {
-    body.profile-detail-page .profile-name-cell .button {
-        right: 8px;
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    body.profile-detail-page .profile-info-cell {
-        padding: 8px 5px;
-    }
-
-    body.profile-detail-page .profile-info-cell strong {
-        font-size: 11px;
     }
 }
