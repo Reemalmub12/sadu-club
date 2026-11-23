@@ -8545,9 +8545,96 @@ body.light-theme.participation-requests-page
 }
 
 /* Stop iPhone Safari from turning dates into blue links */
-a[x-apple-data-detectors] {
-    color: inherit;
-    text-decoration: none;
+a[x-apple-data-detectors],
+a[x-apple-data-detectors] *,
+body.competition-detail-page a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: inherit !important;
 }
 
 /* ---------- PHASE 3 - MOBILE FIXES - END ---------- */
+
+/* ==========================================
+   COURSE DETAILS - RESPONSIVE SUMMARY ORDER
+   Desktop: keep the original side-by-side layout.
+   Tablet/mobile: image and enrollment button first,
+   followed by the course text and details.
+========================================== */
+
+@media screen and (max-width: 768px) {
+    .course-details-page .course-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        width: 100%;
+    }
+
+    .course-details-page .course-media {
+        order: 1;
+        width: 100%;
+        flex: 0 0 auto;
+        align-items: stretch;
+    }
+
+    .course-details-page .course-info {
+        order: 2;
+        width: 100%;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+    .course-details-page .course-media img {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .course-details-page .course-media .button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .course-details-page .course-info h1 {
+        font-size: clamp(25px, 6vw, 32px);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .course-details-page .course-info > p,
+    .course-details-page .course-facts dd {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .course-details-page .course-summary,
+    .course-details-page .panel {
+        padding: 18px;
+    }
+
+    .course-details-page .course-summary {
+        gap: 18px;
+    }
+
+    .course-details-page .course-facts {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .course-details-page .course-panels {
+        gap: 16px;
+    }
+
+    .course-details-page .countdown {
+        gap: 7px;
+    }
+
+    .course-details-page .time-box {
+        min-width: 0;
+        padding: 10px 4px;
+    }
+}
