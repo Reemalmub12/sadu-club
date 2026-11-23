@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SADU | Add New Offering</title>
+
+    <!-- Shared SADU Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="add-offering-page" onload="startPage()">
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <!-- SADU Logo -->
+        <div class="logo">
+            <img
+                src="images/sadu-logo.png"
+                alt="SADU Logo"
+            >
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="home.html">HOME</a>
+
+            <a href="community.html">COMMUNITY</a>
+
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+
+            <a href="about.html">ABOUT US</a>
+
+            <a href="member-dashboard.html">
+                MEMBER DASHBOARD
+            </a>
+
+            <a
+                href="manager-dashboard.html"
+                aria-current="page"
+            >
+                MANAGER DASHBOARD
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="add-offering-main">
+
+        <!-- Breadcrumb Navigation -->
+        <nav
+            class="sadu-breadcrumb"
+            aria-label="Breadcrumb"
+        >
+
+            <ol>
+
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="manager-dashboard.html">
+                        Manager Dashboard
+                    </a>
+                </li>
+
+                <li aria-current="page">
+                    Add New Offering
+                </li>
+
+            </ol>
+
+        </nav>
+
+
+        <!-- Page Heading -->
+        <h1>Add New Offering</h1>
+
+        <p class="add-offering-intro">
+            Fill in the details to create a new club offering
+        </p>
+
+
+        <!-- ==========================================
+             ADD NEW OFFERING FORM
+        ========================================== -->
+
+        <form
+            id="add-offering-form"
+            class="sadu-demo-form"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+            novalidate
+        >
+
+            <div class="add-offering-card">
+
+                <h2>Offering Details</h2>
+
+
+                <!-- Offering Name -->
+                <div class="add-offering-field">
+
+                    <label for="offering-name">
+                        Offering Name: *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="offering-name"
+                        name="offering-name"
+                        placeholder="Enter offering name..."
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Offering Image -->
+                <div class="add-offering-field">
+
+                    <label for="offering-image">
+                        Image: *
+                    </label>
+
+                    <div class="sadu-file-picker">
+
+                        <!-- Native File Input -->
+                        <input
+                            type="file"
+                            id="offering-image"
+                            name="offering-image"
+                            aria-label="Choose an image file"
+                            required
+                        >
+
+                        <!-- Custom File Button -->
+                        <span
+                            class="sadu-file-button"
+                            aria-hidden="true"
+                        >
+                            Choose File
+                        </span>
+
+                        <!-- Selected File Name -->
+                        <span
+                            class="sadu-file-help"
+                            id="selected-file-name"
+                            aria-live="polite"
+                        >
+                            PNG, JPG or WEBP
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Price / Registration Fee -->
+                <div class="add-offering-field">
+
+                    <label for="offering-price">
+                        Price / Registration Fee: *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="offering-price"
+                        name="offering-price"
+                        inputmode="decimal"
+                        autocomplete="off"
+                        pattern="(?:0|[1-9][0-9]*)(?:\.[0-9]{1,2})?"
+                        placeholder="Enter price in SAR..."
+                        title="Enter a valid amount, e.g. 25 or 25.50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Offering Description -->
+                <div class="add-offering-field">
+
+                    <label for="offering-description">
+                        Description: *
+                    </label>
+
+                    <textarea
+                        id="offering-description"
+                        name="offering-description"
+                        placeholder="Enter description..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit Button -->
+            <div class="add-offering-submit">
+
+                <input
+                    type="submit"
+                    class="sadu-submit"
+                    value="Submit"
+                >
+
+            </div>
+
+        </form>
+
+        <!-- Form messages use native JavaScript alerts. -->
+
+    </main>
+
+
+    <!-- ==========================================
+         SHARED FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- Footer Logo -->
+            <div class="footer-brand">
+
+                <img
+                    src="images/sadu-logo.png"
+                    alt="SADU Logo"
+                >
+
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">
+                    COMMUNITY
+                </a>
+
+                <a href="about.html">
+                    ABOUT US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+
+            <p>Copyright © 2026 SADU</p>
+
+        </div>
+
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time:
+            <span id="clock"></span>
+        </p>
+
+    </footer>
+
+
+    <!-- Shared JavaScript File -->
+    <script src="javaScript.js"></script>
+
+</body>
+</html>

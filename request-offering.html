@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================
+         PAGE SETTINGS
+         ========================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request to Join an Offering | SADU</title>
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="request-offering-page" onload="startPage()">
+
+    <!-- ============================================================
+         HEADER - START
+         ============================================================ -->
+
+    <header>
+
+        <!-- SADU Logo -->
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+
+            <a href="member-dashboard.html" aria-current="page">
+                MEMBER DASHBOARD
+            </a>
+
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+        </nav>
+
+    </header>
+
+    <!-- ============================================================
+         HEADER - END
+         ============================================================ -->
+
+
+    <!-- ============================================================
+         MAIN CONTENT - START
+         ============================================================ -->
+
+    <main>
+
+        <!-- =========================
+             BREADCRUMB NAVIGATION
+             ========================= -->
+
+        <nav class="sadu-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="member-dashboard.html">
+                        Member Dashboard
+                    </a>
+                </li>
+
+                <li aria-current="page">
+                    Request to Join an Offering
+                </li>
+            </ol>
+        </nav>
+
+
+        <!-- ============================================================
+             REQUEST SECTION - START
+             ============================================================ -->
+
+        <section class="request-section">
+
+            <!-- Page Title -->
+            <h1>Request to Join an Offering</h1>
+
+            <p>Submit a request to participate in an offering.</p>
+
+
+            <!-- ========================================================
+                 REQUEST FORM - START
+                 ======================================================== -->
+
+            <form id="request-form" class="request-form" novalidate>
+
+
+                <!-- =========================
+                     OFFERING TYPE
+                     ========================= -->
+
+                <div class="request-field">
+
+                    <label class="field-label" id="offering-type-label">
+                        Offering Type
+                        <span class="required-star">*</span>
+                    </label>
+
+                    <div class="sadu-select-wrap">
+
+                        <!-- Native Select for JavaScript -->
+                        <select
+                            id="offering-type"
+                            class="sadu-native-select"
+                            tabindex="-1"
+                            aria-hidden="true">
+
+                            <option value="">Select a type</option>
+                            <option value="competitions">Competitions</option>
+                            <option value="courses">Courses</option>
+
+                        </select>
+
+                        <!-- Custom Dropdown Button -->
+                        <button
+                            type="button"
+                            id="offering-type-button"
+                            class="sadu-dropdown-button"
+                            aria-labelledby="offering-type-label offering-type-text"
+                            aria-expanded="false">
+
+                            <span
+                                id="offering-type-text"
+                                class="sadu-dropdown-label">
+                                Select a type
+                            </span>
+
+                            <span class="sadu-dropdown-arrow"></span>
+
+                        </button>
+
+                        <!-- Custom Dropdown Menu -->
+                        <div
+                            id="offering-type-menu"
+                            class="sadu-dropdown-menu"
+                            hidden>
+
+                            <button
+                                type="button"
+                                class="sadu-dropdown-option"
+                                data-value="competitions">
+                                Competitions
+                            </button>
+
+                            <button
+                                type="button"
+                                class="sadu-dropdown-option"
+                                data-value="courses">
+                                Courses
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     OFFERING NAME
+                     ========================= -->
+
+                <div class="request-field">
+
+                    <label class="field-label" id="offering-name-label">
+                        Offering Name
+                        <span class="required-star">*</span>
+                    </label>
+
+                    <div class="sadu-select-wrap">
+
+                        <!-- Native Select -->
+                        <select
+                            id="offering-name"
+                            class="sadu-native-select">
+
+                            <option value="">Select an offering</option>
+
+                        </select>
+
+                        <!-- Custom Dropdown Button -->
+                        <button
+                            type="button"
+                            id="offering-name-button"
+                            class="sadu-dropdown-button"
+                            aria-labelledby="offering-name-label"
+                            aria-expanded="false">
+
+                            <span class="sadu-dropdown-label">
+                                Select an offering
+                            </span>
+
+                            <span class="sadu-dropdown-arrow"></span>
+
+                        </button>
+
+                        <!-- Custom Dropdown Menu -->
+                        <div
+                            id="offering-name-menu"
+                            class="sadu-dropdown-menu"
+                            hidden>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     FULL NAME
+                     ========================= -->
+
+                <div class="request-field">
+
+                    <label class="field-label" for="full-name">
+                        Full Name
+                        <span class="required-star">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="member-full-name"
+                        class="full-name-input"
+                        placeholder="Enter your full name"
+                        autocomplete="off"
+                        autocapitalize="words"
+                        spellcheck="false">
+
+                </div>
+
+
+                <!-- =========================
+                     PREFERRED DATE
+                     ========================= -->
+
+                <div class="request-field">
+
+                    <span class="field-label">
+                        Preferred Date
+                        <span class="required-star">*</span>
+                    </span>
+
+                    <div
+                        id="date-picker-wrapper"
+                        class="date-picker-wrapper">
+
+                        <!-- Date Picker Button -->
+                        <button
+                            type="button"
+                            id="date-picker-button"
+                            class="date-picker-button"
+                            aria-expanded="false">
+
+                            <span id="selected-date-text">
+                                Select an available date and time
+                            </span>
+
+                            <span
+                                class="calendar-icon"
+                                aria-hidden="true">
+                                &#128197;
+                            </span>
+
+                        </button>
+
+
+                        <!-- ====================================================
+                             CALENDAR PANEL - START
+                             ==================================================== -->
+
+                        <div
+                            id="calendar-panel"
+                            class="calendar-panel"
+                            hidden>
+
+
+                            <!-- Calendar Header -->
+                            <div class="calendar-header">
+
+                                <!-- Previous Month -->
+                                <button
+                                    type="button"
+                                    id="previous-month"
+                                    class="calendar-nav"
+                                    aria-label="Previous month">
+                                    &#8249;
+                                </button>
+
+                                <!-- Current Month -->
+                                <h2 id="calendar-month"></h2>
+
+                                <!-- Next Month -->
+                                <button
+                                    type="button"
+                                    id="next-month"
+                                    class="calendar-nav"
+                                    aria-label="Next month">
+                                    &#8250;
+                                </button>
+
+                            </div>
+
+
+                            <!-- Calendar Weekdays -->
+                            <div class="calendar-weekdays">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+
+
+                            <!-- Calendar Days Generated by JavaScript -->
+                            <div
+                                id="calendar-days"
+                                class="calendar-days">
+                            </div>
+
+
+                            <!-- =========================
+                                 AVAILABLE TIME SLOTS
+                                 ========================= -->
+
+                            <div class="calendar-times">
+
+                                <h3>Available Time Slots</h3>
+
+                                <p
+                                    id="selected-day-label"
+                                    class="time-hint">
+                                    Choose an available day
+                                </p>
+
+                                <!-- Time Buttons Generated by JavaScript -->
+                                <div
+                                    id="time-slots"
+                                    class="time-slots">
+                                </div>
+
+                                <!-- Confirm Date and Time -->
+                                <button
+                                    type="button"
+                                    id="calendar-done"
+                                    class="calendar-done-button"
+                                    disabled>
+                                    Done
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ====================================================
+                             CALENDAR PANEL - END
+                             ==================================================== -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     FORM ACTIONS
+                     ========================= -->
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        id="submit-request"
+                        class="submit-button">
+                        Submit Request
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- ========================================================
+                 REQUEST FORM - END
+                 ======================================================== -->
+
+
+            <!-- ========================================================
+                 NEW PARTICIPATION REQUESTS - START
+                 ======================================================== -->
+
+            <section
+                id="new-requests"
+                class="new-requests-section"
+                hidden>
+
+                <h2>New Participation Requests</h2>
+
+                <div class="requests-table-wrapper">
+
+                    <table class="requests-table">
+
+                        <!-- Table Header -->
+                        <thead>
+                            <tr>
+                                <th>Offering Name</th>
+                                <th>Member Name</th>
+                                <th>Preferred Date</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Table Body Populated by JavaScript -->
+                        <tbody id="requests-body"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================================
+                 NEW PARTICIPATION REQUESTS - END
+                 ======================================================== -->
+
+        </section>
+
+        <!-- ============================================================
+             REQUEST SECTION - END
+             ============================================================ -->
+
+    </main>
+
+    <!-- ============================================================
+         MAIN CONTENT - END
+         ============================================================ -->
+
+
+    <!-- ============================================================
+         FOOTER - START
+         ============================================================ -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- SADU Logo -->
+            <div class="footer-brand">
+                <img src="images/sadu-logo.png" alt="SADU Logo">
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- ============================================================
+         FOOTER - END
+         ============================================================ -->
+
+
+    <!-- =========================
+         SHARED JAVASCRIPT
+         ========================= -->
+
+    <script src="javaScript.js"></script>
+
+</body>
+</html>

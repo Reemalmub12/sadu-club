@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================
+         HOME PAGE - DOCUMENT SETTINGS - START
+    ========================================== -->
+
+    <!-- Character encoding -->
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>SADU | Home</title>
+
+    <!-- Shared CSS file -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- DOCUMENT SETTINGS - END -->
+</head>
+
+<body class="home-page" onload="startPage()">
+
+    <!-- ==========================================
+         GLOBAL HEADER - START
+    ========================================== -->
+
+    <header>
+
+        <!-- Website logo -->
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <!-- Main navigation bar -->
+        <nav class="navbar" aria-label="Main navigation">
+
+            <!-- Current page -->
+            <a href="home.html" aria-current="page">HOME</a>
+
+            <!-- Other website pages -->
+            <a href="community.html">COMMUNITY</a>
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+
+        </nav>
+
+        <!-- Light/Dark theme toggle -->
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch theme"
+            title="Switch theme">
+
+            <!-- Icon updated by JavaScript -->
+            <span id="theme-icon" aria-hidden="true">☀</span>
+
+        </button>
+
+    </header>
+
+    <!-- GLOBAL HEADER - END -->
+
+
+    <!-- ==========================================
+         HOME PAGE - MAIN CONTENT - START
+    ========================================== -->
+
+    <main>
+
+        <!-- ==========================================
+             HERO SECTION - START
+        ========================================== -->
+
+        <section class="hero">
+
+            <!-- Hero logo and introduction -->
+            <div class="hero-content">
+
+                <!-- Main heading -->
+                <h1 class="hero-logo">
+                    <img src="images/sadu-logo.png" alt="SADU">
+                </h1>
+
+                <!-- Website description -->
+                <div class="hero-text">
+                    <p>
+                        Where gamers play, compete, learn, and connect.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Animated controller image -->
+            <div class="hero-image">
+                <img
+                    src="images/controller.png"
+                    alt="SADU Pixel Art Game Controller">
+            </div>
+
+        </section>
+
+        <!-- HERO SECTION - END -->
+
+
+        <!-- ==========================================
+             CLUB OFFERINGS - START
+        ========================================== -->
+
+        <section class="offerings">
+
+            <!-- Section title -->
+            <h2>Explore Our Offerings</h2>
+
+            <!-- Section introduction -->
+            <p class="section-intro">
+                Discover the different ways you can be part of SADU.
+            </p>
+
+
+            <!-- ======================================
+                 OFFERING 1 - SAUDI LEGENDS ARENA
+            ====================================== -->
+
+            <div class="offering-card competition-card">
+
+                <!-- Competition information -->
+                <div class="offering-info">
+
+                    <h3>COMPETITIONS</h3>
+
+                    <h4>Saudi Legends Arena</h4>
+
+                    <!-- Competition description -->
+                    <p>
+                        Step into the arena and compete against
+                        skilled players to become a Saudi gaming legend.
+                    </p>
+
+                    <!-- Competition details -->
+                    <p>Date: December 20, 2026</p>
+                    <p>Type: Championship</p>
+                    <p>Prize: 2,000 SAR</p>
+
+                    <!-- Competition details link -->
+                    <a
+                        href="saudi-legends-arena-details.html"
+                        class="button">
+                        View Details →
+                    </a>
+
+                    <!-- Additional information shown on hover -->
+                    <div class="hover-info">
+                        Showcase your skills and compete for glory!
+                    </div>
+
+                </div>
+
+                <!-- Competition image -->
+                <div class="offering-image">
+                    <img
+                        src="images/competition-saudi-legends-arena.jpg"
+                        alt="Saudi Legends Arena">
+                </div>
+
+            </div>
+
+            <!-- OFFERING 1 - END -->
+
+
+            <!-- ======================================
+                 OFFERING 2 - FROM HERITAGE TO PIXELS
+            ====================================== -->
+
+            <div class="offering-card">
+
+                <!-- Course information -->
+                <div class="offering-info">
+
+                    <h3>COURSES</h3>
+
+                    <h4>From Heritage to Pixels</h4>
+
+                    <!-- Course description -->
+                    <p>
+                        Transform Saudi heritage, traditional architecture,
+                        and cultural patterns into stunning digital artwork.
+                        Learn to create unique visual assets for games
+                        inspired by Saudi identity.
+                    </p>
+
+                    <!-- Course details -->
+                    <p>Level: Intermediate</p>
+                    <p>Duration: 4 Weeks</p>
+                    <p>Location: Esports Arena</p>
+
+                    <!-- Course details link -->
+                    <a
+                        href="from-heritage-to-pixels.html"
+                        class="button">
+                        View Details →
+                    </a>
+
+                    <!-- Additional information shown on hover -->
+                    <div class="hover-info">
+                        Explore digital art and bring Saudi heritage into games!
+                    </div>
+
+                </div>
+
+                <!-- Course image -->
+                <div class="offering-image">
+                    <img
+                        src="images/course-from-heritage-to-pixels.jpg"
+                        alt="From Heritage to Pixels course">
+                </div>
+
+            </div>
+
+            <!-- OFFERING 2 - END -->
+
+
+            <!-- ======================================
+                 OFFERING 3 - DIRIYAH DUEL
+            ====================================== -->
+
+            <div class="offering-card competition-card card3">
+
+                <!-- Competition information -->
+                <div class="offering-info">
+
+                    <h3>COMPETITIONS</h3>
+
+                    <h4>Diriyah Duel</h4>
+
+                    <!-- Competition description -->
+                    <p>
+                        Enter a competitive 1v1 showdown inspired
+                        by the heritage of Diriyah. Challenge your
+                        opponent and prove your skills!
+                    </p>
+
+                    <!-- Competition details -->
+                    <p>Date: December 20, 2026</p>
+                    <p>Format: 1 vs 1</p>
+                    <p>Prize: 500 SAR</p>
+
+                    <!-- Competition details link -->
+                    <a
+                        href="diriyah-duel-details.html"
+                        class="button">
+                        View Details →
+                    </a>
+
+                    <!-- Additional information shown on hover -->
+                    <div class="hover-info">
+                        Face your opponent and fight for victory!
+                    </div>
+
+                </div>
+
+                <!-- Competition image -->
+                <div class="offering-image">
+                    <img
+                        src="images/competition-diriyah-duel.jpg"
+                        alt="Diriyah Duel">
+                </div>
+
+            </div>
+
+            <!-- OFFERING 3 - END -->
+
+        </section>
+
+        <!-- CLUB OFFERINGS - END -->
+
+
+        <!-- ==========================================
+             SADU SPOTLIGHT - START
+        ========================================== -->
+
+        <section class="spotlight">
+
+            <!-- Section title -->
+            <h2>SADU SPOTLIGHT</h2>
+
+            <!-- Featured member card -->
+            <div class="spotlight-card">
+
+                <!-- Featured member name -->
+                <h3>Rayan</h3>
+
+                <!-- Featured member description -->
+                <p class="player-description">
+                    Rayan is a dedicated member of the SADU community,
+                    known for his talent, positive attitude, and active
+                    participation in competitions and events.
+                </p>
+
+                <!-- Player statistics -->
+                <div class="player-stats">
+
+                    <!-- Community interactions -->
+                    <div class="stat">
+
+                        <div class="stat-heading">
+                            <span class="stat-icon">💬</span>
+                            <span class="stat-number">120</span>
+                        </div>
+
+                        <p>Community<br>Interactions</p>
+
+                    </div>
+
+                    <!-- Tournaments won -->
+                    <div class="stat">
+
+                        <div class="stat-heading">
+                            <span class="stat-icon">🏆</span>
+                            <span class="stat-number">5</span>
+                        </div>
+
+                        <p>Tournaments<br>Won</p>
+
+                    </div>
+
+                    <!-- Courses completed -->
+                    <div class="stat">
+
+                        <div class="stat-heading">
+                            <span class="stat-icon">🎓</span>
+                            <span class="stat-number">6</span>
+                        </div>
+
+                        <p>Courses<br>Completed</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Weekly spotlight explanation -->
+                <div class="spotlight-note">
+
+                    <!-- Calendar icon -->
+                    <span class="calendar-icon">▦</span>
+
+                    <p>
+                        Each week, a player is chosen from the community
+                        and their achievements are showcased in SADU.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SADU SPOTLIGHT - END -->
+
+
+        <!-- ==========================================
+             CLUB MEMBER REVIEWS - START
+        ========================================== -->
+
+        <section class="reviews">
+
+            <!-- Section title -->
+            <h2>Club Member Reviews</h2>
+
+            <!-- Section description -->
+            <p class="reviews-intro">
+                See what our members say about their experiences in SADU.
+            </p>
+
+            <!-- Reviews container -->
+            <div class="reviews-container">
+
+                <!-- REVIEW 1 - MIA -->
+                <div class="review-card">
+
+                    <h3>Mia</h3>
+
+                    <!-- Reviewed offering -->
+                    <strong>Diriyah Duel</strong>
+
+                    <!-- Star rating -->
+                    <div class="stars">★★★★★</div>
+
+                    <!-- Member feedback -->
+                    <p>
+                        "Highly recommended! Amazing community and great events."
+                    </p>
+
+                    <!-- Review date -->
+                    <p class="review-date">October 10, 2026</p>
+
+                </div>
+                <!-- REVIEW 1 - END -->
+
+
+                <!-- REVIEW 2 - ADAM -->
+                <div class="review-card">
+
+                    <h3>Adam</h3>
+
+                    <!-- Reviewed offering -->
+                    <strong>From Heritage to Pixels</strong>
+
+                    <!-- Star rating -->
+                    <div class="stars">★★★★★</div>
+
+                    <!-- Member feedback -->
+                    <p>
+                        "I love this place! The competitions are so well organized."
+                    </p>
+
+                    <!-- Review date -->
+                    <p class="review-date">October 8, 2026</p>
+
+                </div>
+                <!-- REVIEW 2 - END -->
+
+
+                <!-- REVIEW 3 - SARA -->
+                <div class="review-card">
+
+                    <h3>Sara</h3>
+
+                    <!-- Reviewed offering -->
+                    <strong>Diriyah Duel</strong>
+
+                    <!-- Star rating -->
+                    <div class="stars">★★★★★</div>
+
+                    <!-- Member feedback -->
+                    <p>
+                        "Amazing community! I've learned so much from the courses."
+                    </p>
+
+                    <!-- Review date -->
+                    <p class="review-date">October 5, 2026</p>
+
+                </div>
+                <!-- REVIEW 3 - END -->
+
+
+                <!-- REVIEW 4 - RYAN -->
+                <div class="review-card">
+
+                    <h3>Ryan</h3>
+
+                    <!-- Reviewed offering -->
+                    <strong>Saudi Legends Arena</strong>
+
+                    <!-- Star rating -->
+                    <div class="stars">★★★★★</div>
+
+                    <!-- Member feedback -->
+                    <p>
+                        "Wonderful trainers and friendly people."
+                    </p>
+
+                    <!-- Review date -->
+                    <p class="review-date">October 2, 2026</p>
+
+                </div>
+                <!-- REVIEW 4 - END -->
+
+            </div>
+
+        </section>
+
+        <!-- CLUB MEMBER REVIEWS - END -->
+
+    </main>
+
+    <!-- HOME PAGE - MAIN CONTENT - END -->
+
+
+    <!-- ==========================================
+         GLOBAL FOOTER - START
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <!-- Footer main content -->
+        <div class="footer-main">
+
+            <!-- Footer logo -->
+            <div class="footer-brand">
+                <img
+                    src="images/sadu-logo.png"
+                    alt="SADU Logo">
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <!-- Email link -->
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <!-- Phone link -->
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- Footer navigation links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+        <!-- Real-time clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- GLOBAL FOOTER - END -->
+
+
+    <!-- ==========================================
+         BACK TO TOP BUTTON - START
+    ========================================== -->
+
+    <!-- Button controlled by JavaScript -->
+    <button id="back-to-top" class="back-to-top">
+        ↑
+    </button>
+
+    <!-- BACK TO TOP BUTTON - END -->
+
+
+    <!-- ==========================================
+         JAVASCRIPT CONNECTION
+    ========================================== -->
+
+    <!-- Shared JavaScript file -->
+    <script src="javaScript.js"></script>
+
+</body>
+</html>

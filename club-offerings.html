@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Club Offerings | SADU</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="inner-page offerings-page" onload="startPage()">
+
+    <!-- ==========================================
+         HEADER - START
+    ========================================== -->
+
+    <header>
+
+        <!-- Website Logo -->
+        <div class="logo">
+            <img alt="SADU Logo" src="images/sadu-logo.png">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation" class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a aria-current="page" href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+        </nav>
+
+    </header>
+
+    <!-- HEADER - END -->
+
+
+    <!-- ==========================================
+         MAIN CONTENT - START
+    ========================================== -->
+
+    <main>
+
+        <!-- ==========================================
+             BREADCRUMB - START
+        ========================================== -->
+
+        <nav aria-label="Breadcrumb" class="sadu-breadcrumb">
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li aria-current="page">Club Offerings</li>
+            </ol>
+        </nav>
+
+        <!-- BREADCRUMB - END -->
+
+
+        <!-- ==========================================
+             PAGE INTRODUCTION - START
+        ========================================== -->
+
+        <h1>Club Offerings</h1>
+
+        <p>
+            Explore our games, activities, workshops, and experiences.
+        </p>
+
+        <!-- PAGE INTRODUCTION - END -->
+
+
+        <!-- ==========================================
+             SEARCH AND SORT CONTROLS - START
+        ========================================== -->
+
+        <div class="sort-bar">
+
+            <!-- Search Field -->
+            <label class="search-field offerings-search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    id="search-offerings"
+                    aria-label="Search club offerings"
+                    placeholder="Search offerings..."
+                    type="search"
+                >
+            </label>
+
+
+            <!-- Sort Label -->
+            <label class="sort-label" for="sort-offerings">
+                Sort by:
+            </label>
+
+
+            <!-- Original Hidden Sort Select -->
+            <select
+                aria-label="Sort club offerings"
+                class="sadu-select sort-select"
+                id="sort-offerings"
+                name="offering-sort"
+                hidden
+            >
+
+                <option value="">Sort By</option>
+
+                <optgroup label="Price">
+                    <option value="price-asc">Low to High</option>
+                    <option value="price-desc">High to Low</option>
+                </optgroup>
+
+                <optgroup label="Name">
+                    <option value="name-asc">A&ndash;Z</option>
+                    <option value="name-desc">Z&ndash;A</option>
+                </optgroup>
+
+            </select>
+
+
+            <!-- ==========================================
+                 CUSTOM SORT DROPDOWN - START
+            ========================================== -->
+
+            <div class="offerings-sort-dropdown">
+
+                <!-- Dropdown Button -->
+                <button
+                    type="button"
+                    id="offerings-sort-button"
+                    class="offerings-sort-button"
+                    aria-label="Sort club offerings"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                >
+                    <span id="offerings-sort-text">Sort By</span>
+                    <span
+                        class="offerings-sort-arrow"
+                        aria-hidden="true"
+                    ></span>
+                </button>
+
+
+                <!-- Dropdown Options -->
+                <div
+                    id="offerings-sort-options"
+                    class="offerings-sort-options"
+                    role="listbox"
+                    aria-label="Sort club offerings"
+                    hidden
+                >
+
+                    <!-- Default Option -->
+                    <button
+                        type="button"
+                        class="offerings-sort-option"
+                        role="option"
+                        aria-selected="true"
+                        data-value=""
+                    >
+                        Sort By
+                    </button>
+
+
+                    <!-- Price Sorting -->
+                    <div class="offerings-sort-group-label">
+                        Price
+                    </div>
+
+                    <button
+                        type="button"
+                        class="offerings-sort-option"
+                        role="option"
+                        aria-selected="false"
+                        data-value="price-asc"
+                    >
+                        Low to High
+                    </button>
+
+                    <button
+                        type="button"
+                        class="offerings-sort-option"
+                        role="option"
+                        aria-selected="false"
+                        data-value="price-desc"
+                    >
+                        High to Low
+                    </button>
+
+
+                    <!-- Name Sorting -->
+                    <div class="offerings-sort-group-label">
+                        Name
+                    </div>
+
+                    <button
+                        type="button"
+                        class="offerings-sort-option"
+                        role="option"
+                        aria-selected="false"
+                        data-value="name-asc"
+                    >
+                        A–Z
+                    </button>
+
+                    <button
+                        type="button"
+                        class="offerings-sort-option"
+                        role="option"
+                        aria-selected="false"
+                        data-value="name-desc"
+                    >
+                        Z–A
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- CUSTOM SORT DROPDOWN - END -->
+
+        </div>
+
+        <!-- SEARCH AND SORT CONTROLS - END -->
+
+
+        <!-- ==========================================
+             OFFERING CARDS - START
+        ========================================== -->
+
+        <section
+            aria-label="Available offerings"
+            class="offerings-grid"
+        >
+
+            <!-- ==========================================
+                 GAMING COURSES CARD - START
+            ========================================== -->
+
+            <article
+                class="offer-card"
+                data-name="Gaming Courses"
+                data-price="150"
+            >
+
+                <img
+                    alt="Pixel-art open book on a Sadu pattern"
+                    src="images/courses-card.png"
+                >
+
+                <h2>Gaming Courses</h2>
+
+                <p class="offer-description">
+                    Learn game development, digital art, and pixel design
+                    through hands-on courses inspired by Saudi heritage
+                    and culture.
+                </p>
+
+                <p class="offer-fee">
+                    <strong>Registration fee:</strong>
+                    150 &ndash; 300 SAR
+                </p>
+
+                <a class="button" href="courses.html">
+                    View details
+                </a>
+
+            </article>
+
+            <!-- GAMING COURSES CARD - END -->
+
+
+            <!-- ==========================================
+                 COMPETITION CARD - START
+            ========================================== -->
+
+            <article
+                class="offer-card"
+                data-name="Competition"
+                data-price="50"
+            >
+
+                <img
+                    alt="Pixel-art trophy on a Sadu pattern"
+                    src="images/competitions-card.png"
+                >
+
+                <h2>Competition</h2>
+
+                <p class="offer-description">
+                    Join team and 1v1 gaming tournaments, test your skills
+                    against other players, and compete for prizes and glory.
+                </p>
+
+                <p class="offer-fee">
+                    <strong>Registration fee:</strong>
+                    50 &ndash; 75 SAR
+                </p>
+
+                <a class="button" href="competitions.html">
+                    View details
+                </a>
+
+            </article>
+
+            <!-- COMPETITION CARD - END -->
+
+        </section>
+
+        <!-- OFFERING CARDS - END -->
+
+
+        <!-- ==========================================
+             EMPTY SEARCH RESULTS - START
+        ========================================== -->
+
+        <p
+            class="offerings-empty"
+            id="offerings-empty"
+            role="status"
+            hidden
+        >
+            No offerings match your search.
+        </p>
+
+        <!-- EMPTY SEARCH RESULTS - END -->
+
+    </main>
+
+    <!-- MAIN CONTENT - END -->
+
+
+    <!-- ==========================================
+         FOOTER - START
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- Footer Logo -->
+            <div class="footer-brand">
+                <img
+                    alt="SADU Logo"
+                    src="images/sadu-logo.png"
+                >
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- FOOTER - END -->
+
+
+    <!-- ==========================================
+         JAVASCRIPT - START
+    ========================================== -->
+
+    <script src="javaScript.js"></script>
+
+    <!-- JAVASCRIPT - END -->
+
+</body>
+</html>

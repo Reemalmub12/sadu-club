@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Gaming Courses | SADU Gaming Club</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="sadu-content-page courses-page" onload="startPage()">
+
+    <!-- ==========================================
+         HEADER - START
+    ========================================== -->
+
+    <header>
+
+        <!-- Website Logo -->
+        <div class="logo">
+            <img alt="SADU Logo" src="images/sadu-logo.png">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation" class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a aria-current="page" href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+        </nav>
+
+    </header>
+
+    <!-- HEADER - END -->
+
+
+    <!-- ==========================================
+         MAIN CONTENT - START
+    ========================================== -->
+
+    <main>
+
+        <!-- ==========================================
+             BREADCRUMB - START
+        ========================================== -->
+
+        <nav aria-label="Breadcrumb" class="sadu-breadcrumb">
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="club-offerings.html">Club Offerings</a>
+                </li>
+                <li aria-current="page">Courses</li>
+            </ol>
+        </nav>
+
+        <!-- BREADCRUMB - END -->
+
+
+        <!-- ==========================================
+             COURSES HERO - START
+        ========================================== -->
+
+        <section class="hero">
+            <div class="hero-copy">
+                <h1>Gaming Courses</h1>
+                <p>Learn, create, and bring your ideas to life through games inspired by Saudi culture and heritage.</p>
+            </div>
+        </section>
+
+        <!-- COURSES HERO - END -->
+
+
+        <!-- ==========================================
+             AVAILABLE COURSES - START
+        ========================================== -->
+
+        <section class="section">
+
+            <h2 class="visually-hidden">Available Courses</h2>
+
+            <!-- ==========================================
+                 COURSES TOOLBAR - START
+            ========================================== -->
+
+            <div class="toolbar courses-toolbar">
+
+                <div class="course-filters">
+
+                    <!-- Search Field -->
+                    <label class="search-field">
+                        <span aria-hidden="true">⌕</span>
+                        <input
+                            aria-label="Search courses"
+                            placeholder="Search courses..."
+                            type="search"
+                        >
+                    </label>
+
+
+                    <!-- Original Hidden Level Select -->
+                    <select
+                        aria-label="Filter courses by level"
+                        class="sadu-select level-select"
+                        id="course-level"
+                        name="course-level"
+                        hidden
+                    >
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                    </select>
+
+
+                    <!-- ==========================================
+                         CUSTOM LEVEL DROPDOWN - START
+                    ========================================== -->
+
+                    <div class="courses-level-dropdown">
+
+                        <!-- Level Dropdown Button -->
+                        <button
+                            type="button"
+                            id="courses-level-button"
+                            class="courses-level-button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span id="courses-level-text">All Levels</span>
+                            <span class="courses-level-arrow" aria-hidden="true"></span>
+                        </button>
+
+
+                        <!-- Level Dropdown Options -->
+                        <div
+                            id="courses-level-options"
+                            class="courses-level-options"
+                            role="listbox"
+                            aria-label="Filter courses by level"
+                            hidden
+                        >
+
+                            <button
+                                type="button"
+                                class="courses-level-option"
+                                role="option"
+                                aria-selected="true"
+                                data-value="all"
+                            >
+                                All Levels
+                            </button>
+
+                            <button
+                                type="button"
+                                class="courses-level-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="beginner"
+                            >
+                                Beginner
+                            </button>
+
+                            <button
+                                type="button"
+                                class="courses-level-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="intermediate"
+                            >
+                                Intermediate
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CUSTOM LEVEL DROPDOWN - END -->
+
+
+                    <!-- Original Hidden Sort Select -->
+                    <select
+                        aria-label="Sort courses"
+                        class="sadu-select sort-select"
+                        id="sort-courses"
+                        name="course-sort"
+                        hidden
+                    >
+                        <option value="">Sort By</option>
+
+                        <optgroup label="Price">
+                            <option value="price-asc">Low to High</option>
+                            <option value="price-desc">High to Low</option>
+                        </optgroup>
+
+                        <optgroup label="Name">
+                            <option value="name-asc">A&ndash;Z</option>
+                            <option value="name-desc">Z&ndash;A</option>
+                        </optgroup>
+                    </select>
+
+
+                    <!-- ==========================================
+                         CUSTOM SORT DROPDOWN - START
+                    ========================================== -->
+
+                    <div class="courses-sort-dropdown">
+
+                        <!-- Sort Dropdown Button -->
+                        <button
+                            type="button"
+                            id="courses-sort-button"
+                            class="courses-sort-button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span id="courses-sort-text">Sort By</span>
+                            <span class="courses-sort-arrow" aria-hidden="true"></span>
+                        </button>
+
+
+                        <!-- Sort Dropdown Options -->
+                        <div
+                            id="courses-sort-options"
+                            class="courses-sort-options"
+                            role="listbox"
+                            aria-label="Sort courses"
+                            hidden
+                        >
+
+                            <button
+                                type="button"
+                                class="courses-sort-option"
+                                role="option"
+                                aria-selected="true"
+                                data-value=""
+                            >
+                                Sort By
+                            </button>
+
+                            <div class="courses-sort-group-label">Price</div>
+
+                            <button
+                                type="button"
+                                class="courses-sort-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="price-asc"
+                            >
+                                Low to High
+                            </button>
+
+                            <button
+                                type="button"
+                                class="courses-sort-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="price-desc"
+                            >
+                                High to Low
+                            </button>
+
+                            <div class="courses-sort-group-label">Name</div>
+
+                            <button
+                                type="button"
+                                class="courses-sort-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="name-asc"
+                            >
+                                A–Z
+                            </button>
+
+                            <button
+                                type="button"
+                                class="courses-sort-option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="name-desc"
+                            >
+                                Z–A
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CUSTOM SORT DROPDOWN - END -->
+
+                </div>
+
+            </div>
+
+            <!-- COURSES TOOLBAR - END -->
+
+
+            <!-- ==========================================
+                 COURSE CARDS - START
+            ========================================== -->
+
+            <div class="course-grid">
+
+                <!-- ==========================================
+                     SADU GAME MAKERS CARD - START
+                ========================================== -->
+
+                <article class="course-card course-full">
+
+                    <!-- Course Image -->
+                    <div class="course-image">
+                        <img
+                            alt="Saudi-inspired game development illustration"
+                            src="images/course-sadu-game-makers.jpg"
+                        >
+                        <span class="course-status">Full</span>
+                    </div>
+
+                    <!-- Course Content -->
+                    <div class="course-content">
+
+                        <span class="category">Game Development</span>
+
+                        <h3>Sadu Game Makers</h3>
+
+                        <p>Discover the world of game development through hands-on projects inspired by Saudi culture. Learn the fundamentals of game design, build interactive experiences, and bring your creative gaming ideas to life.</p>
+
+                        <!-- Course Details -->
+                        <div aria-label="Course details" class="course-info" role="group">
+
+                            <!-- Level -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M3 20V12h4v8M10 20V7h4v13M17 20V3h4v17"></path>
+                                </svg>
+                                <span>Beginner</span>
+                            </span>
+
+                            <!-- Duration -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>6 weeks</span>
+                            </span>
+
+                            <!-- Location -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                                <span>Gaming Lab</span>
+                            </span>
+
+                        </div>
+
+                        <!-- Registration Fee -->
+                        <p class="offering-price">
+                            <span>Registration fee</span>
+                            <strong>SAR 300</strong>
+                        </p>
+
+                        <a class="button card-button" href="sadu-game-makers.html">
+                            View Course
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- SADU GAME MAKERS CARD - END -->
+
+
+                <!-- ==========================================
+                     FROM HERITAGE TO PIXELS CARD - START
+                ========================================== -->
+
+                <article class="course-card">
+
+                    <!-- Course Image -->
+                    <div class="course-image">
+                        <img
+                            alt="Saudi heritage transforming into digital pixels illustration"
+                            src="images/course-from-heritage-to-pixels.jpg"
+                        >
+                    </div>
+
+                    <!-- Course Content -->
+                    <div class="course-content">
+
+                        <span class="category">Digital Art &amp; Game Design</span>
+
+                        <h3>From Heritage to Pixels</h3>
+
+                        <p>Transform Saudi heritage, traditional architecture, and cultural patterns into stunning digital artwork. Explore digital design techniques and learn how to create unique visual assets for games inspired by Saudi identity.</p>
+
+                        <!-- Course Details -->
+                        <div aria-label="Course details" class="course-info" role="group">
+
+                            <!-- Level -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M3 20V12h4v8M10 20V7h4v13M17 20V3h4v17"></path>
+                                </svg>
+                                <span>Intermediate</span>
+                            </span>
+
+                            <!-- Duration -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>4 weeks</span>
+                            </span>
+
+                            <!-- Location -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                                <span>Esports Arena</span>
+                            </span>
+
+                        </div>
+
+                        <!-- Registration Fee -->
+                        <p class="offering-price">
+                            <span>Registration fee</span>
+                            <strong>SAR 150</strong>
+                        </p>
+
+                        <a
+                            aria-label="View Course"
+                            class="button card-button"
+                            href="from-heritage-to-pixels.html"
+                        >
+                            View Course
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- FROM HERITAGE TO PIXELS CARD - END -->
+
+
+                <!-- ==========================================
+                     NAJDI PIXEL ART CARD - START
+                ========================================== -->
+
+                <article class="course-card">
+
+                    <!-- Course Image -->
+                    <div class="course-image">
+                        <img
+                            alt="Najdi architecture in pixel art illustration"
+                            src="images/course-najdi-pixel-art.jpg"
+                        >
+                    </div>
+
+                    <!-- Course Content -->
+                    <div class="course-content">
+
+                        <span class="category">Game Environment Design</span>
+
+                        <h3>Najdi Pixel Art</h3>
+
+                        <p>Explore the art of pixel design through the distinctive architecture and cultural heritage of Najd. Learn to create pixel-art environments, traditional buildings, and detailed game assets inspired by Saudi landscapes and heritage.</p>
+
+                        <!-- Course Details -->
+                        <div aria-label="Course details" class="course-info" role="group">
+
+                            <!-- Level -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M3 20V12h4v8M10 20V7h4v13M17 20V3h4v17"></path>
+                                </svg>
+                                <span>Beginner</span>
+                            </span>
+
+                            <!-- Duration -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>3 weeks</span>
+                            </span>
+
+                            <!-- Location -->
+                            <span class="course-meta-item">
+                                <svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                                <span>VR Training Room</span>
+                            </span>
+
+                        </div>
+
+                        <!-- Registration Fee -->
+                        <p class="offering-price">
+                            <span>Registration fee</span>
+                            <strong>SAR 155</strong>
+                        </p>
+
+                        <a class="button card-button" href="najdi-pixel-art.html">
+                            View Course
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- NAJDI PIXEL ART CARD - END -->
+
+            </div>
+
+            <!-- COURSE CARDS - END -->
+
+
+            <!-- ==========================================
+                 EMPTY SEARCH RESULTS - START
+            ========================================== -->
+
+            <p
+                class="results-empty"
+                id="courses-empty"
+                role="status"
+                hidden
+            >
+                No courses match your search or selected level.
+            </p>
+
+            <!-- EMPTY SEARCH RESULTS - END -->
+
+        </section>
+
+        <!-- AVAILABLE COURSES - END -->
+
+    </main>
+
+    <!-- MAIN CONTENT - END -->
+
+
+    <!-- ==========================================
+         FOOTER - START
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- Footer Logo -->
+            <div class="footer-brand">
+                <img alt="SADU Logo" src="images/sadu-logo.png">
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">SaduClub@gmail.com</a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">+966 50 123 4567</a>
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+        <!-- Real-Time Clock -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- FOOTER - END -->
+
+
+    <!-- ==========================================
+         JAVASCRIPT - START
+    ========================================== -->
+
+    <script src="javaScript.js"></script>
+
+    <!-- JAVASCRIPT - END -->
+
+</body>
+</html>

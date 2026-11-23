@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================
+         COMMUNITY PAGE - DOCUMENT SETTINGS - START
+    ========================================== -->
+
+    <!-- Defines character encoding -->
+    <meta charset="utf-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Community | SADU</title>
+
+    <!-- Connects the shared CSS file -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- DOCUMENT SETTINGS - END -->
+</head>
+
+<body class="inner-page community-page" onload="startPage()">
+
+    <!-- ==========================================
+         GLOBAL HEADER - START
+    ========================================== -->
+
+    <header>
+
+        <!-- SADU website logo -->
+        <div class="logo">
+            <img src="images/sadu-logo.png" alt="SADU Logo">
+        </div>
+
+        <!-- Main navigation links -->
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="home.html">HOME</a>
+
+            <!-- Identifies the current page -->
+            <a href="community.html" aria-current="page">COMMUNITY</a>
+
+            <a href="club-offerings.html">CLUB OFFERINGS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="member-dashboard.html">MEMBER DASHBOARD</a>
+            <a href="manager-dashboard.html">MANAGER DASHBOARD</a>
+
+        </nav>
+
+    </header>
+
+    <!-- GLOBAL HEADER - END -->
+
+
+    <!-- ==========================================
+         COMMUNITY PAGE - MAIN CONTENT - START
+    ========================================== -->
+
+    <main>
+
+        <!-- ==========================================
+             BREADCRUMB NAVIGATION - START
+        ========================================== -->
+
+        <!-- Shows the user's current location in the website -->
+        <nav class="sadu-breadcrumb" aria-label="Breadcrumb">
+
+            <ol>
+                <!-- Link to the Home Page -->
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <!-- Current page -->
+                <li aria-current="page">Community</li>
+            </ol>
+
+        </nav>
+
+        <!-- BREADCRUMB NAVIGATION - END -->
+
+
+        <!-- ==========================================
+             COMMUNITY CHAT SECTION - START
+        ========================================== -->
+
+        <section class="community-chat">
+
+            <!-- Chat section heading -->
+            <h1 class="chat-title">SADU Community</h1>
+
+
+            <!-- ==========================================
+                 CHAT MESSAGES CONTAINER - START
+            ========================================== -->
+
+            <!--
+                Displays community messages.
+
+                id="chat-box":
+                Allows JavaScript to access the chat container.
+
+                aria-live="polite":
+                Announces new messages to screen readers.
+
+                role="log":
+                Identifies this area as a message log.
+
+                tabindex="0":
+                Allows keyboard users to focus on the chat.
+            -->
+
+            <div
+                id="chat-box"
+                class="chat-messages"
+                aria-label="Community chat messages"
+                aria-live="polite"
+                role="log"
+                tabindex="0">
+
+                <!-- Current conversation date -->
+                <p class="chat-day">Today</p>
+
+
+                <!-- ======================================
+                     MESSAGE 1 - SARA
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">SA</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Sara</strong> · 10:32 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Hi everyone! Is anyone joining the Desert Rivals tournament this Friday?
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 1 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 2 - OMAR
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">OM</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Omar</strong> · 10:34 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Yes! I just sent my request.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 2 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 3 - NAJD
+                ====================================== -->
+
+                <!-- Sent message -->
+                <div class="message sent">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">NA</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Najd</strong> · 10:36 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            I'm interested too. Do we need to form a team first?
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 3 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 4 - SARA
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">SA</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Sara</strong> · 10:38 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Teams of five. I'm still looking for two more players, so message me if you want to join us.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 4 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 5 - LINA
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">LI</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Lina</strong> · 10:41 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Quick question: which gaming course would you recommend for a beginner?
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 5 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 6 - KHALID
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">KH</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Khalid</strong> · 10:44 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Sadu Game Makers. The instructor explains everything step by step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 6 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 7 - NAJD
+                ====================================== -->
+
+                <!-- Sent message -->
+                <div class="message sent">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">NA</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Najd</strong> · 10:46 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            Thanks, Khalid! How much is the registration fee?
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 7 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 8 - LINA
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">LI</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Lina</strong> · 10:48 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            It's 300 SAR. Seats are limited though, so register early.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 8 - END -->
+
+
+                <!-- ======================================
+                     MESSAGE 9 - OMAR
+                ====================================== -->
+
+                <!-- Received message -->
+                <div class="message received">
+
+                    <!-- Sender avatar initials -->
+                    <span class="avatar" aria-hidden="true">OM</span>
+
+                    <!-- Message content -->
+                    <div class="bubble">
+
+                        <!-- Sender name and message time -->
+                        <p class="message-info">
+                            <strong>Omar</strong> · 10:52 AM
+                        </p>
+
+                        <!-- Message text -->
+                        <p>
+                            See you all at the tournament. Good luck, everyone!
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE 9 - END -->
+
+            </div>
+
+            <!-- CHAT MESSAGES CONTAINER - END -->
+
+
+            <!-- ==========================================
+                 COMMUNITY MESSAGE FORM - START
+            ========================================== -->
+
+            <!--
+                Allows the user to type and send messages.
+
+                id="community-message-form":
+                Used by JavaScript to handle form submission.
+
+                novalidate:
+                Disables the browser's default form validation.
+            -->
+
+            <form
+                id="community-message-form"
+                class="chat-form sadu-demo-form"
+                action="#"
+                method="post"
+                novalidate>
+
+                <!-- Accessible label for the message input -->
+                <label
+                    class="visually-hidden"
+                    for="chat-message">
+                    Type a message
+                </label>
+
+                <!-- Message input field -->
+                <input
+                    id="chat-message"
+                    name="message"
+                    type="text"
+                    placeholder="Type a message..."
+                    maxlength="500"
+                    required="required">
+
+                <!-- Sends the message using JavaScript -->
+                <input
+                    class="sadu-submit"
+                    type="submit"
+                    value="Send">
+
+            </form>
+
+            <!-- COMMUNITY MESSAGE FORM - END -->
+
+        </section>
+
+        <!-- COMMUNITY CHAT SECTION - END -->
+
+    </main>
+
+    <!-- COMMUNITY PAGE - MAIN CONTENT - END -->
+
+
+    <!-- ==========================================
+         GLOBAL FOOTER - START
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <!-- Main footer content -->
+        <div class="footer-main">
+
+            <!-- SADU footer logo -->
+            <div class="footer-brand">
+                <img
+                    src="images/sadu-logo.png"
+                    alt="SADU Logo">
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-contact">
+
+                <h2>Contact Us</h2>
+
+                <!-- Email contact link -->
+                <p>
+                    Email:
+                    <a href="mailto:SaduClub@gmail.com">
+                        SaduClub@gmail.com
+                    </a>
+                </p>
+
+                <!-- Phone contact link -->
+                <p>
+                    Phone:
+                    <a href="tel:+966501234567">
+                        +966 50 123 4567
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- Quick navigation links -->
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <a href="community.html">COMMUNITY</a>
+                <a href="about.html">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+        <!-- Copyright information -->
+        <div class="footer-bottom footer-copyright">
+            <p>Copyright © 2026 SADU</p>
+        </div>
+
+        <!-- Real-time clock updated by JavaScript -->
+        <p id="clock-container">
+            Current Time: <span id="clock"></span>
+        </p>
+
+    </footer>
+
+    <!-- GLOBAL FOOTER - END -->
+
+
+    <!-- ==========================================
+         GLOBAL JAVASCRIPT CONNECTION
+    ========================================== -->
+
+    <!-- Loads the shared JavaScript file -->
+    <script src="javaScript.js"></script>
+
+</body>
+</html>
