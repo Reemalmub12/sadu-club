@@ -8490,3 +8490,45 @@ body.light-theme.participation-requests-page
 }
 
 /* ============== PARTICIPATION REQUESTS : END ============== */
+
+
+/* ==========================================
+   PHASE 3 - MOBILE FIXES - START
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Inner pages: show the footer columns under each other */
+    .inner-page .site-footer .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Center the footer clock */
+    #clock-container {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    /* Member dashboard table: scroll sideways instead of breaking words */
+    .member-dashboard-page .participation-table {
+        table-layout: auto;
+    }
+
+    .member-dashboard-page .participation-table th,
+    .member-dashboard-page .participation-table td {
+        width: auto;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        padding: 12px;
+    }
+
+    /* Center the arrow inside the Back to Top circle */
+    .back-to-top {
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+/* ---------- PHASE 3 - MOBILE FIXES - END ---------- */
