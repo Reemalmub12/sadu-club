@@ -8653,6 +8653,15 @@ a[x-apple-data-detectors] {
         line-height: 1.25;
     }
 
+    .sadu-detail-page .profile-name-cell .button {
+        position: static;
+        transform: none;
+        display: inline-block;
+        margin: 12px 0 0;
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
     .sadu-detail-page .profile-info-cell {
         padding: 12px 10px;
         font-size: 16px;
