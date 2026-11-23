@@ -4456,6 +4456,21 @@ body.light-theme.competitions-page .competition-toolbar .sort-select {
         word-break: normal;
     }
 
+    /* Keep long email addresses inside their own table cell on phones. */
+    .sadu-detail-page .email-info-cell div {
+        display: block;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .sadu-detail-page .email-info-cell p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+    }
+
     .sadu-detail-page .profile-section-cell {
         padding: 18px;
     }
@@ -8668,5 +8683,155 @@ body.competition-detail-page a[x-apple-data-detectors] {
     .course-details-page .time-box {
         min-width: 0;
         padding: 10px 4px;
+    }
+}
+
+
+/* ============================================================
+   FINAL MOBILE FIXES — ORGANIZER / INSTRUCTOR PROFILE PAGES
+   ============================================================ */
+
+/* Keep the profile pages marked under ABOUT US, including
+   when a mobile browser leaves a previous link in :hover. */
+body.profile-detail-page header nav.navbar a {
+    color: #F2E5C9 !important;
+}
+
+body.profile-detail-page header nav.navbar a[href="about.html"],
+body.profile-detail-page header nav.navbar a[href="about.html"]:hover,
+body.profile-detail-page header nav.navbar a[href="about.html"]:focus {
+    color: #F15A24 !important;
+}
+
+/* Anchor the edit button to the profile card itself.
+   The name remains centered in its own row. */
+body.profile-detail-page .profile-name-cell {
+    position: relative;
+}
+
+body.profile-detail-page .profile-heading-content {
+    position: static;
+}
+
+body.profile-detail-page .profile-name-cell .button {
+    position: absolute;
+    top: -45px;
+    right: 12px;
+    margin: 0;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+/* Prevent oversized page headings and profile text on phones. */
+@media screen and (max-width: 700px) {
+    body.profile-detail-page .instructor-page {
+        width: 94%;
+        margin: 20px auto 40px;
+    }
+
+    body.profile-detail-page .instructor-page > h1 {
+        font-size: clamp(27px, 7vw, 34px);
+        line-height: 1.12;
+        margin: 18px 0 0;
+        overflow-wrap: normal;
+    }
+
+    body.profile-detail-page .sadu-breadcrumb {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    body.profile-detail-page .instructor-wrapper {
+        width: 100%;
+        margin: 22px auto 40px;
+        padding: 8px;
+    }
+
+    body.profile-detail-page .profile-name-cell {
+        padding: 30px 12px 22px;
+    }
+
+    body.profile-detail-page .profile-name-cell h2 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    body.profile-detail-page .profile-name-cell .button {
+        top: -45px;
+        right: 12px;
+        padding: 10px 16px;
+        font-size: 16px;
+        line-height: 1.2;
+        border-radius: 8px;
+    }
+
+    /* Give the two information columns enough width for labels. */
+    body.profile-detail-page .profile-photo-cell {
+        width: 25%;
+    }
+
+    body.profile-detail-page .profile-info-cell {
+        width: 37.5%;
+        padding: 10px 7px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    body.profile-detail-page .profile-info-cell strong {
+        display: block;
+        font-size: 12px;
+        line-height: 1.25;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    body.profile-detail-page .profile-info-cell p {
+        font-size: 14px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    body.profile-detail-page .profile-info-cell span {
+        font-size: 20px;
+        margin: 0 0 5px;
+    }
+
+    body.profile-detail-page .profile-placeholder {
+        width: min(82px, 85%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    body.profile-detail-page .profile-section-cell {
+        padding: 16px;
+    }
+
+    body.profile-detail-page .profile-section-cell h2 {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    body.profile-detail-page .profile-section-cell p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+}
+
+/* Slightly tighter sizing on very narrow phones. */
+@media screen and (max-width: 380px) {
+    body.profile-detail-page .profile-name-cell .button {
+        right: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    body.profile-detail-page .profile-info-cell {
+        padding: 8px 5px;
+    }
+
+    body.profile-detail-page .profile-info-cell strong {
+        font-size: 11px;
     }
 }
